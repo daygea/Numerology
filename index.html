@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerology Divination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        button {
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced Numerology Divination</h1>
+    <p>Select a number for your reading:</p>
+    <div class="button-grid">
+        <script>
+            for (let i = 1; i <= 16; i++) {
+                document.write(`<button onclick="showDivination(${i})">${i}</button>`);
+            }
+        </script>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function showDivination(number) {
+            const meanings = {
+                1: "Good. Talks about a long journey, traveling, successful marriage, long life, prosperity, and good health. If it appears for someone, their journey will be successful.",
+                2: "Good if female client. Prosperity, good market, good spouse, no ailment. Warning: A parent must take care of their child, or the child may turn against them.",
+                3: "Not good, but there is a solution. Indicates possible operation for a pregnant woman, but prayer can change everything.",
+                4: "50/50 chance. Represents stagnancy; a good house but indicates slow progress in journeys. Sadaqah: kola and bitter kola. With prayers, things can improve.",
+                5: "Good. Full of wealth, goodness, and speaks about pregnancy. Brings abundance in business and personal life.",
+                6: "Not good, but there is a solution. Talks about star and destiny issues that can be corrected with prayer and sadaqah. Challenges will pass with perseverance.",
+                7: "Good. A house of powerful people and emere; signifies obedience and a good home. Capital YES. Signifies leadership and influence.",
+                8: "Not good and no solution. Speaks about death, bad omen, and sickness leading to death. If it appears for a sick person, they may not recover.",
+                9: "Not good and no solution. Indicates death. Do not even collect money from the person. The situation is severe, and no remedy is available.",
+                10: "Good, but momentary luck. Speaks of goodness and happiness that doesn’t last long. Be cautious and maximize opportunities while they last.",
+                11: "Not good and no solution. Indicates 'No' to anything being asked. A strong negative sign for any inquiry.",
+                12: "50/50 chance. Talks about promiscuity. Be careful of fair-skinned people. If it appears for a man, he may engage in stealing and cheating. If for a woman, she may also be involved in infidelity.",
+                13: "If the client is sick, it is the hand of the mothers; if they do not respond quickly, they may not survive. If not sickness, it is good. Represents deep ancestral influence.",
+                14: "Good. Everything about it is positive. Indicates success, balance, and positive energies in all endeavors.",
+                15: "Good. Talks about both men and women; anything that comes to it is good. Signifies harmony in relationships and business.",
+                16: "Not good. Talks about divorce. The person they divorced is causing hindrance. A warning to be cautious in relationships."
+            };
+            document.getElementById("result").textContent = `Your number is ${number}: ${meanings[number]}`;
+        }
+    </script>
+</body>
+</html>
