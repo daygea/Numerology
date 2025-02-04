@@ -40,20 +40,28 @@
         .reveal {
             background-color: #fff !important;
             color: #000 !important;
+            border: 1px solid #b5651d;
             font-size: 20px;
             transform: rotateY(360deg);
         }
         #result {
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: bold;
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            font-size: 14px;
             color: #333;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
         }
     </style>
 </head>
 <body>
-    <h1>Numerology Divination</h1>
-    <p>Select a number for your reading</p>
+    <h1>Ibeere</h1>
+    
     <div class="button-container" id="buttonContainer">
         <div class="button-column" id="leftColumn"></div>
         <div class="button-column" id="rightColumn"></div>
@@ -94,7 +102,7 @@
             button.textContent = number;
             button.classList.add("reveal");
             setTimeout(() => {
-                document.getElementById("result").textContent = `Your selection is ${number}: ${meanings[number]}`;
+                document.getElementById("result").textContent = `${number}: ${meanings[number]}`;
             }, 1000);
 
             setTimeout(() => {
@@ -105,22 +113,22 @@
         }
 
         const meanings = {
-            1: "Good. Talks about a long journey, traveling, successful marriage, long life, prosperity, and good health. If it appears for someone, their journey will be successful.",
-            2: "Good. Prosperity, good market, good spouse, no ailment. Warning: A parent must take care of their child, or the child may turn against them.",
-            3: "Not good, but there is a solution. Indicates possible operation for a pregnant woman, but prayer can change everything.",
-            4: "50/50 chance. Represents stagnancy; a good house but indicates slow progress in journeys. Sadaqah: kola and bitter kola. With prayers, things can improve.",
-            5: "Good. Full of wealth, goodness, and speaks about pregnancy. Brings abundance in business and personal life.",
+            1: "Good, talks about a long journey, traveling, successful marriage, long life, prosperity, and good health. If it appears for someone, their journey will be successful.",
+            2: "Good, prosperity, good market, good spouse, no ailment. Warning: A parent must take care of their child, or the child may turn against them.",
+            3: "Not good, but there is a solution. Indicates possible surgical operation for a pregnant woman, but prayer can change everything.",
+            4: "50/50 chance, represents stagnancy; a good house but indicates slow progress in journeys. Sadaqah: kola and bitter kola. With prayers, things can improve.",
+            5: "Good, full of wealth, goodness, and speaks about pregnancy. Brings abundance in business and personal life.",
             6: "Not good, but there is a solution. Talks about star and destiny issues that can be corrected with prayer and sadaqah. Challenges will pass with perseverance.",
-            7: "Good. A house of powerful people and emere; signifies obedience and a good home. Capital YES. Signifies leadership and influence.",
+            7: "Good, a house of powerful people and emere; signifies obedience and a good home. Capital YES. Signifies leadership and influence.",
             8: "Not good and no solution. Speaks about death, bad omen, and sickness leading to death. If it appears for a sick person, they may not recover.",
             9: "Not good and no solution. Indicates death. Do not even collect money from the person. The situation is severe, and no remedy is available.",
             10: "Good, but momentary luck. Speaks of goodness and happiness that doesn’t last long. Be cautious and maximize opportunities while they last.",
             11: "Not good and no solution. Indicates 'No' to anything being asked. A strong negative sign for any inquiry.",
-            12: "50/50 chance. Talks about promiscuity. Be careful of fair-skinned people. If it appears for a man, he may engage in stealing and cheating. If for a woman, she may also be involved in infidelity.",
+            12: "50/50 chance, talks about promiscuity. Be careful of fair-skinned people. If it appears for a man, he may engage in stealing and cheating. If for a woman, she may also be involved in infidelity.",
             13: "If the client is sick, it is the hand of the mothers; if they do not respond quickly, they may not survive. If not sickness, it is good. Represents deep ancestral influence.",
-            14: "Good. Everything about it is positive. Indicates success, balance, and positive energies in all endeavors.",
-            15: "Good. Talks about both men and women; anything that comes to it is good. Signifies harmony in relationships and business.",
-            16: "Not good. Talks about divorce. The person they divorced is causing hindrance. A warning to be cautious in relationships."
+            14: "Good, everything about it is positive. Indicates success, balance, and positive energies in all endeavors.",
+            15: "Good, talks about both men and women; anything that comes to it is good. Signifies harmony in relationships and business.",
+            16: "Not good, talks about divorce. The person they divorced is causing hindrance. A warning to be cautious in relationships."
         };
 
         loadButtons();
